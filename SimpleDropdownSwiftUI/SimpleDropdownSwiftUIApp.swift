@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct SimpleDropdownSwiftUIApp: App {
+    
+    @StateObject private var dropdownViewModel: DropdownViewModel = DropdownViewModel()
+
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(.white)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.green)]
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            NavigationView{
+                DropdownSelector().toolbar(.hidden)
+            }.environmentObject(dropdownViewModel)        }
     }
 }

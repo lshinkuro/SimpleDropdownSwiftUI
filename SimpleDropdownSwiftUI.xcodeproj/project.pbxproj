@@ -14,6 +14,11 @@
 		320EA3A22944569100BDDA4C /* SimpleDropdownSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EA3A12944569100BDDA4C /* SimpleDropdownSwiftUITests.swift */; };
 		320EA3AC2944569100BDDA4C /* SimpleDropdownSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EA3AB2944569100BDDA4C /* SimpleDropdownSwiftUIUITests.swift */; };
 		320EA3AE2944569100BDDA4C /* SimpleDropdownSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EA3AD2944569100BDDA4C /* SimpleDropdownSwiftUIUITestsLaunchTests.swift */; };
+		320EA3BC294458C400BDDA4C /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EA3BB294458C400BDDA4C /* DropdownSelector.swift */; };
+		320EA3BF2944594900BDDA4C /* DropdownOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EA3BE2944594900BDDA4C /* DropdownOptionModel.swift */; };
+		320EA3C229445E1D00BDDA4C /* DropdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EA3C129445E1D00BDDA4C /* DropdownRow.swift */; };
+		320EA3C429445F9900BDDA4C /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EA3C329445F9900BDDA4C /* Dropdown.swift */; };
+		320EA3C72944670E00BDDA4C /* DropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EA3C62944670E00BDDA4C /* DropdownViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		320EA3A72944569100BDDA4C /* SimpleDropdownSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleDropdownSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		320EA3AB2944569100BDDA4C /* SimpleDropdownSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDropdownSwiftUIUITests.swift; sourceTree = "<group>"; };
 		320EA3AD2944569100BDDA4C /* SimpleDropdownSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDropdownSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		320EA3BB294458C400BDDA4C /* DropdownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownSelector.swift; sourceTree = "<group>"; };
+		320EA3BE2944594900BDDA4C /* DropdownOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownOptionModel.swift; sourceTree = "<group>"; };
+		320EA3C129445E1D00BDDA4C /* DropdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownRow.swift; sourceTree = "<group>"; };
+		320EA3C329445F9900BDDA4C /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		320EA3C62944670E00BDDA4C /* DropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,9 @@
 		320EA38F2944568F00BDDA4C /* SimpleDropdownSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				320EA3C029445DEE00BDDA4C /* Component */,
+				320EA3BD2944591F00BDDA4C /* Model */,
+				320EA3BA294458AE00BDDA4C /* View */,
 				320EA3902944568F00BDDA4C /* SimpleDropdownSwiftUIApp.swift */,
 				320EA3922944568F00BDDA4C /* ContentView.swift */,
 				320EA3942944569100BDDA4C /* Assets.xcassets */,
@@ -125,6 +138,40 @@
 				320EA3AD2944569100BDDA4C /* SimpleDropdownSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = SimpleDropdownSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		320EA3BA294458AE00BDDA4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				320EA3C5294466F300BDDA4C /* ViewModel */,
+				320EA3BB294458C400BDDA4C /* DropdownSelector.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		320EA3BD2944591F00BDDA4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				320EA3BE2944594900BDDA4C /* DropdownOptionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		320EA3C029445DEE00BDDA4C /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				320EA3C129445E1D00BDDA4C /* DropdownRow.swift */,
+				320EA3C329445F9900BDDA4C /* Dropdown.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		320EA3C5294466F300BDDA4C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				320EA3C62944670E00BDDA4C /* DropdownViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +306,11 @@
 			files = (
 				320EA3932944568F00BDDA4C /* ContentView.swift in Sources */,
 				320EA3912944568F00BDDA4C /* SimpleDropdownSwiftUIApp.swift in Sources */,
+				320EA3BC294458C400BDDA4C /* DropdownSelector.swift in Sources */,
+				320EA3C72944670E00BDDA4C /* DropdownViewModel.swift in Sources */,
+				320EA3C229445E1D00BDDA4C /* DropdownRow.swift in Sources */,
+				320EA3C429445F9900BDDA4C /* Dropdown.swift in Sources */,
+				320EA3BF2944594900BDDA4C /* DropdownOptionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
