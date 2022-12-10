@@ -39,20 +39,20 @@ struct DropdownSelector: View {
                             Image(systemName: selectedOption == nil ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill")
                                 .resizable()
                                 .frame(width: 9,height: 5)
-                                .font(.caption)
-                                .foregroundColor(.gray)
+                                .font(.headline)
+                                .foregroundColor(.black)
                             
                         }
                     }
-                    .frame(width: UIScreen.main.bounds.width, height: self.buttonHeight)
                     .padding(.horizontal, 20)
+                    .frame(height: self.buttonHeight)
                     .cornerRadius(5)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5).stroke(.gray, lineWidth: 1))
                     .overlay(
                         VStack {
                             if self.shouldShowDropdown {
-                                Spacer(minLength: buttonHeight + 10)
+                                Spacer(minLength: buttonHeight)
                                 
                                 Dropdown(option: dm.dropdownData , onOptionSelected: {
                                     option in
@@ -64,9 +64,9 @@ struct DropdownSelector: View {
                             }
                         } , alignment: .topLeading
                     ).background(
-                        RoundedRectangle(cornerRadius: 5).fill(.white)
+                        RoundedRectangle(cornerRadius: 5).fill(Color.white)
                     )
-                }
+                }.padding(.horizontal)
 
             }.navigationTitle("Simple Dropdown")
         }
@@ -96,6 +96,9 @@ class DeveloperPreview {
     static let instance = DeveloperPreview()
     
     init() {}
+    
+    let options: [DropdownOption] = [DropdownOption(value: "Sunday")]
+    let option: DropdownOption = DropdownOption(value: "Sunday")
     
     let homeVm = DropdownViewModel()
 }

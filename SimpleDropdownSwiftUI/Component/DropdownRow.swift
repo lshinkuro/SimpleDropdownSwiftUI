@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DropdownRow: View {
-    
+        
     var option: DropdownOption
     var onOptionSelected: ((_ option: DropdownOption)-> Void)?
     
@@ -19,17 +19,18 @@ struct DropdownRow: View {
             }
         }) {
             HStack {
-                Text(self.option.value).font(.system(size: 14))
+                Text(self.option.value)
+                    .font(.system(size: 14))
+                    .foregroundColor(.gray)
             }
-        }.padding(.horizontal, 16)
-            .padding(.vertical, 5)
+        }.padding(.horizontal)
+         .padding(.vertical, 10)
     }
 }
 
 struct DropdownRow_Previews: PreviewProvider {
     
-    static let options: DropdownOption = DropdownOption(value: "Sunday")
     static var previews: some View {
-        DropdownRow(option: options)
+        DropdownRow(option: dev.option).previewLayout(.sizeThatFits)
     }
 }
